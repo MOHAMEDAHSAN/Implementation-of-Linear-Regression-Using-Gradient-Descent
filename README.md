@@ -31,12 +31,8 @@ def linear_regression(X1, y, learning_rate=0.01, num_iters=1000):
     for _ in range(num_iters):
         predictions = (X).dot(theta).reshape(-1, 1)
         errors = (predictions - y).reshape(-1,1)
-
-
         theta -= learning_rate * (1 / len(X1)) * X.T.dot(errors)
-
     return theta
-
 data = pd.read_csv('50_Startups.csv',header=None) 
 print(data.head())
 
@@ -61,7 +57,6 @@ prediction = np.dot(np.append(1, new_Scaled), theta)
 prediction=prediction.reshape(-1,1)
 pre=scaler.inverse_transform(prediction)
 print(f"Predicted value: {pre}")
-
 ```
 
 ## Output:
